@@ -1,0 +1,35 @@
+/* creating a table for my plant_store**/
+
+create table PLANTS (id integer primary key, plant text, quantity integer, price integer, level_ofcare text);
+
+ /* plants  im selling and price, with level of care*/
+ 
+insert into plants values(1, "photos", 30, 15, "Easy");
+insert into plants values(2, "monsteras", 35, 25,"Easy");
+insert into plants values(3, "Elephant ears", 25, 35,"medium");
+insert into plants values(4, "Alocasias", 10, 25,"medium");
+insert into plants values (5, "Aloe vera", 5, 8,"hard");
+insert into plants values (6, "peace lilis", 10, 15,"easy");
+insert into plants values (7, "prayer plant", 5, 15,"hard");
+insert into plants values (8, "swiss cheese", 10, 25,"medium");
+insert into plants values (9, "mother of thousands", 5, 20,"hard");
+insert into plants values (10, "corn plant", 5, 15,"easy");
+
+ //** average price of each plants and quantity been sold**//
+ SELECT plant, sum(price) FROM plants GROUP BY plant;
+ 
+ 
+/* stationary been sold and price*//
+
+ create table trinkets (id integer primary key, items text, price integer);
+ 
+Insert into trinkets values(1, "nursurie pots",2.50);
+Insert into trinkets values(2, "handmade",45);
+Insert into trinkets values(3, "saucer",5);
+Insert into trinkets values(4, "misting bottle",8);
+Insert into trinkets values(5, "watering can",10);
+Insert into trinkets Values( 6, "moisture reader", 12);
+insert into trinkets values (7, "plants book",15);
+
+
+SELECT * FROM trinkets WHERE Price > 1 ORDER BY price asc;
