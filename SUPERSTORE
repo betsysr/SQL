@@ -35,9 +35,6 @@
     SELECT SUM(stock_quantity)
     FROM superstore;
 
-| SUM(stock_quantity) |
-| ------------------- |
-| 670                 |
 
 ---
 **Query #2**
@@ -46,12 +43,6 @@
     FROM superstore
     GROUP BY category;
 
-| SUM(stock_quantity) | category         |
-| ------------------- | ---------------- |
-| 105                 | Appliances       |
-| 170                 | Electronics      |
-| 175                 | Furnishings      |
-| 220                 | Kitchen Supplies |
 
 ---
 **Query #3**
@@ -60,9 +51,6 @@
     FROM superstore
     WHERE category ='Kitchen Supplies';
 
-| category  |
-| --------- |
-| 58.607500 |
 
 ---
 
